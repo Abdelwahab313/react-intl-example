@@ -1,0 +1,24 @@
+{
+  "HomePage": {
+    "title": "Bienvenue sur Next.js avec i18n !",
+    "description": "Ceci est un exemple simple d'internationalisation utilisant next-intl",
+    "button": "Cliquez ici !",
+    "currentLocale": "Langue actuelle : {locale}"
+  },
+  "AboutPage": {
+    "title": "À Propos de Ce Projet",
+    "description": "Cette page démontre le routage internationalisé et la conception d'interface utilisateur cohérente à travers différentes pages.",
+    "button": "En Savoir Plus !",
+    "currentLocale": "Langue actuelle : {locale}"
+  },
+  "Navigation": {
+    "home": "Accueil",
+    "about": "À propos"
+  },
+  "LanguageSwitcher": {
+    "selectLanguage": "Sélectionner la Langue",
+    "english": "Anglais",
+    "spanish": "Espagnol",
+    "french": "Français"
+  }
+}

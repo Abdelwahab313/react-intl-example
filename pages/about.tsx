@@ -3,9 +3,9 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import LanguageSwitcher from '../components/LanguageSwitcher';
 
-export default function Home() {
-	const t = useTranslations('HomePage');
-	const tNav = useTranslations('Navigation');
+export default function About() {
+	const t = useTranslations('Navigation');
+	const tAbout = useTranslations('AboutPage');
 	const router = useRouter();
 
 	return (
@@ -14,11 +14,9 @@ export default function Home() {
 				<nav className="mb-8 flex justify-between items-center">
 					<div>
 						<Link href="/" className="text-blue-500 hover:text-blue-700 mr-4">
-							{tNav('home')}
+							{t('home')}
 						</Link>
-						<Link href="/about" className="text-blue-500 hover:text-blue-700">
-							{tNav('about')}
-						</Link>
+						<span className="text-gray-500">{t('about')}</span>
 					</div>
 					<div className="w-48">
 						<LanguageSwitcher />
@@ -27,16 +25,16 @@ export default function Home() {
 
 				<main className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
 					<h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-						{t('title')}
+						{tAbout('title')}
 					</h1>
 					<p className="text-lg mb-6 text-gray-600 dark:text-gray-300">
-						{t('description')}
+						{tAbout('description')}
 					</p>
 					<p className="text-sm text-gray-500 dark:text-gray-400 mb-6">
-						{t('currentLocale', { locale: router.locale || 'en' })}
+						{tAbout('currentLocale', { locale: router.locale || 'en' })}
 					</p>
-					<button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-						{t('button')}
+					<button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+						{tAbout('button')}
 					</button>
 				</main>
 			</div>
