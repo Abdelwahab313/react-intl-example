@@ -1,29 +1,15 @@
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
-import Link from 'next/link';
-import LanguageSwitcher from '../components/LanguageSwitcher';
+import Navbar from '../components/Navbar';
 
 export default function Home() {
 	const t = useTranslations('HomePage');
-	const tNav = useTranslations('Navigation');
 	const router = useRouter();
 
 	return (
 		<div className="min-h-screen p-8 bg-gray-50 dark:bg-gray-900">
 			<div className="max-w-4xl mx-auto">
-				<nav className="mb-8 flex justify-between items-center">
-					<div>
-						<Link href="/" className="text-blue-500 hover:text-blue-700 mr-4">
-							{tNav('home')}
-						</Link>
-						<Link href="/about" className="text-blue-500 hover:text-blue-700">
-							{tNav('about')}
-						</Link>
-					</div>
-					<div className="w-48">
-						<LanguageSwitcher />
-					</div>
-				</nav>
+				<Navbar />
 
 				<main className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
 					<h1 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
